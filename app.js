@@ -113,6 +113,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 }
 
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
  testMultiplyArray(testArray);
 
