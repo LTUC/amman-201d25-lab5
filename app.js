@@ -110,6 +110,8 @@ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
+
+
 /////////////////////////////////////
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
@@ -122,11 +124,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    let mUltiar = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
+   
+    return[mUltiar,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mUltiar}.`]
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
