@@ -1,47 +1,42 @@
 'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
-Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers,
+ and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
-
+Test this function by hand in the console to get it working, and when you think it is finished,
+ uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    let output = a + b;
-    return [output, `The sum of ${a} and ${b} is ${output}.`]
+let output= a+b;
+return[output,`The sum of ${a} and ${b} is ${output}.`]
 }
-
+// console.log(sum);
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-//console.log(testSum)
-
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element
+ is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The product of 5 and 9 is 45."
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) {
-    let output = a * b;
-    return [output, `The product of ${a} and ${b} is ${output}.`]
-
+function multiply(a, b) { //eslint-disable-line
+let output=a*b;
+return[output,`The product of ${a} and ${b} is ${output}.`]
 }
-
+// console.log(multiply);
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5, 9);
-
-//console.log(testMultiply);
-=======
-console.log(testMultiply);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -58,73 +53,65 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
-    let output1 = sum(a, b);
-    // console.log(' output1 ' , output1);
-    let output2 = sum(output1[0], c);
-    //console.log(' output2 ', output2);
-    let output3 = multiply(a, b);
-    let output4 = multiply(output3[0], c);
-
-    return [output2[0], output4[0], `${a} and ${b} and ${c} sum to ${output2[0]}.`, `The product of ${a} and ${b} and ${c} is ${output4[0]}.`]
-
 let output1= sum(a,b) ;
 // console.log(' output1 ' , output1);
 let output2 = sum (output1[0] , c);
-console.log(' output2 ', output2);
+// console.log(' output2 ', output2);
 let output3 = multiply(a ,b);
 let output4 = multiply(output3[0] ,c);
 
 return[output2[0],output4[0],`${a} and ${b} and ${c} sum to ${output2[0]}.` ,`The product of ${a} and ${b} and ${c} is ${output4[0]}.` ] 
-
 }
+// console.log(sumAndMultiply);
+
+
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4, 7, 5);
-
-//console.log(testMultiply);
-
-console.log(testSumAndMultiply)
-
-
+testSumAndMultiply(4,7,5);
+//console.log (testSumAndMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array of numbers as its single argument and then 
+returns an array where the first element is the sum of the numbers in the array, and the second element 
+is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition,
+ use your sum() function that you've already created. 
+ You're going to have to be resourceful to figure out how to do this. 
+ However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an
+ array where the first element is the sum of the numbers in the array,
+  and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+
+"2,3,4 was passed in as an array of numbers, and 9 is their sum."
+
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function 
+that you've already created. You're going to have to be resourceful to figure out how to do this. 
+However, you may continue to use the + operator for string concatenation.
+
+Test this function by hand in the console to get it working, and when you think it is finished,
+ uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4];
-
+let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let output = sum(testArray[0] , testArray[1] )
-  //   console.log(output);
-  let output1 = sum (output[0] , testArray[2])
-  // console.log (output1);
-  return[output1[0] ,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${output1[0]} is their sum.` ]
-  }
-  
-// Here is the test for sumArray(); uncomment it to run it
- testSumArray(testArray);
-
-// function sumArray(sumArr) {
-
-//     let output
-//     return [reduce((a, b) => a + b), `${a},${b},${c} was passed in as an array of numbers, and ${output} is their sum.`]
-// }
-
+  let output = sum(testArray[0] , testArray[1] )
+//   console.log(output);
+let output1 = sum (output[0] , testArray[2])
+// console.log (output1);
+return[output1[0] ,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${output1[0]} is their sum.` ]
+}
+// sumArray();
 // Here is the test for sumArray(); uncomment it to run it
 
-//testSumArray(testArray);
-
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -140,12 +127,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
-
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
-
+    let output = multiply(testArray[0] , testArray[1] )
+    //console.log(output)
+    let output1 =  multiply(output[0] , testArray[2])
+     //console.log (output1);
+     return[ output1[0], `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${output1[0]}.`]
+  }
+  
+  // Here is the test for multiplyArray(); uncomment it to run it
+  testMultiplyArray();
+  
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
@@ -165,7 +156,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
