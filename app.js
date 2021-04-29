@@ -147,11 +147,27 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    let testArray = [1,2,3,4,5]; //eslint-disable-line
 
+  let QSixArray = [];
+ let numOfEle = dynamicArray.length;
+  let product;
+  let value = dynamicArray[0];
+
+  for (let i = 1; i < numOfEle + 1; i++) {
+    product = multiply(value, i);
+    value = product[0];
+    console.log(`value is ${value}`);
+  }
+  QSixArray[0] = value;
+  dynamicArray = dynamicArray.join(',');
+  QSixArray[1] = (`The numbers ${dynamicArray} have a product of ${value}.`)
+
+  return QSixArray;
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
