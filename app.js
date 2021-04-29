@@ -112,6 +112,7 @@ function multiplyArray(multArr) { //eslint-disable-line
     return [newUser2, `The numbers ${testArray} have a product of ${newUser2}.`];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
  testMultiplyArray(testArray);
 
