@@ -69,7 +69,7 @@ return[output2[0],output4[0],`${a} and ${b} and ${c} sum to ${output2[0]}.` ,`Th
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
-console.log (testSumAndMultiply);
+// console.log (testSumAndMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -116,6 +116,7 @@ testSumArray(testArray);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
 /* Problem 5
 Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -126,12 +127,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+// let testArray = [2, 3, 4];
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let output = multiply(testArray[0] , testArray[1] )
+  // console.log(output)
+  let output1 =  multiply(output[0] , testArray[2])
+  //  console.log (output1);
+   return[ output1[0], `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${output1[0]}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -140,7 +146,9 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
 
 /////////////////////////////////////
-/* STRETCH GOAL: Problem 6
+/* STRETCH GOAL:
+
+Problem 6
 Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
