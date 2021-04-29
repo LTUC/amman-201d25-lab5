@@ -10,13 +10,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    let output= a+b;
-    return[output,`The sum of ${a} and ${b} is ${output}.`]
-    }
-    
+    let output = a + b;
+    return [output, `The sum of ${a} and ${b} is ${output}.`]
+}
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-console.log(testSum)
+//console.log(testSum)
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -30,15 +30,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { 
-    let output = a*b ;
-    return [output , `The product of ${a} and ${b} is ${output}.`]
+function multiply(a, b) {
+    let output = a * b;
+    return [output, `The product of ${a} and ${b} is ${output}.`]
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
-console.log(testMultiply);
+testMultiply(5, 9);
+//console.log(testMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -53,16 +53,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { 
-    let output1 = a + b + c ;
-    let output2 = a * b * c ;
-    return [output1 ,  output2 , `${a} and ${b} and ${c} sum to ${output1}.` , `The product of ${a} and ${b} and ${c} is ${output2}.` ];
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+    let output1 = sum(a, b);
+    // console.log(' output1 ' , output1);
+    let output2 = sum(output1[0], c);
+    //console.log(' output2 ', output2);
+    let output3 = multiply(a, b);
+    let output4 = multiply(output3[0], c);
 
+    return [output2[0], output4[0], `${a} and ${b} and ${c} sum to ${output2[0]}.`, `The product of ${a} and ${b} and ${c} is ${output4[0]}.`]
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
-console.log(testMultiply);
+testSumAndMultiply(4, 7, 5);
+//console.log(testMultiply);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -77,15 +82,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4];
 
 function sumArray(sumArr) { //eslint-disable-line
-
-}
-
+    let output = sum(testArray[0] , testArray[1] )
+  //   console.log(output);
+  let output1 = sum (output[0] , testArray[2])
+  // console.log (output1);
+  return[output1[0] ,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${output1[0]} is their sum.` ]
+  }
+  
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
