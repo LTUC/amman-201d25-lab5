@@ -35,7 +35,6 @@ function multiply(a, b) { //eslint-disable-line
 multiply(5,9);
 // Here is the test for multiply(); uncomment it to run it ,,
 testMultiply(5,9);
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -109,7 +108,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
-}
+   let FiveReturnArray = [];
+
+    let I1 = multiply((multArr[0]), (multArr[1]));
+    I1 = I1[0];
+  
+    
+    let finalProduct = multiply(I1, multArr[2]);
+    finalProduct = finalProduct[0];
+    FiveReturnArray[0] = finalProduct;
+  
+   
+   FiveReturnArray[1] = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.`
+  
+    return FiveReturnArray;
+  }
+  testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
