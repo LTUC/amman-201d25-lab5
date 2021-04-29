@@ -84,9 +84,9 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
    
-  var aPlusB = sum((sumArr[0]), (sumArr[1]));
+  let aPlusB = sum((sumArr[0]), (sumArr[1]));
   aPlusB = aPlusB[0];
-  var finalSum = sum(aPlusB, sumArr[2])[0];
+  let finalSum = sum(aPlusB, sumArr[2])[0];
  
  return [finalSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`]
  
@@ -112,10 +112,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
     
-  var aTimesB = multiply((multArr[0]), (multArr[1]));
+  let aTimesB = multiply((multArr[0]), (multArr[1]));
   aTimesB = aTimesB[0];
 
-  var finalProduct = multiply(aTimesB, multArr[2]);
+  let finalProduct = multiply(aTimesB, multArr[2]);
   finalProduct = finalProduct[0];
 
   return [finalProduct, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${finalProduct}.` ]
@@ -146,6 +146,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+
+  
 
 }
 
