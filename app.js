@@ -48,10 +48,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sumAb = sum(a,b)
-    let sumAbc = sum(sumAb,c)
-    let multAb = multiply(a,b)
-    let multAbc = multiply(multAb,c)
+    let sumAb = sum(a,b)[0];
+    let sumAbc = sum(sumAb,c)[0];
+    let multAb = multiply(a,b)[0];
+    let multAbc = multiply(multAb,c)[0];
     return [sumAbc , multAbc ,`${a} and ${b} and ${c} sum to ${sumAbc}.` ,`The product of ${a} and ${b} and ${c} is ${multAbc}.` ]
 }
 
