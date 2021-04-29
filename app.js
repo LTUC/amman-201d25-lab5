@@ -53,23 +53,34 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let output1= a+b+c ;
-let output2 = a*b*c;
-return[output1,output2,`${a} and ${b} and ${c} sum to ${output1}.` ,`The product of ${a} and ${b} and ${c} is ${output2}.` ] 
+let output1= sum(a,b) ;
+// console.log(' output1 ' , output1);
+let output2 = sum (output1[0] , c);
+// console.log(' output2 ', output2);
+let output3 = multiply(a ,b);
+let output4 = multiply(output3[0] ,c);
+
+return[output2[0],output4[0],`${a} and ${b} and ${c} sum to ${output2[0]}.` ,`The product of ${a} and ${b} and ${c} is ${output4[0]}.` ] 
 }
-console.log(sumAndMultiply);
+
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
-
+console.log (testSumAndMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an
+ array where the first element is the sum of the numbers in the array,
+  and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function 
+that you've already created. You're going to have to be resourceful to figure out how to do this. 
+However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
