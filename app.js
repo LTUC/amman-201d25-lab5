@@ -51,10 +51,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let output = a + b + c 
-    let input = a * b * c
+   let input = sum(a,b)[0]
+   let output = sum (c,input)[0]
+    let result1 = multiply(a,b)[0]
+    let result2 = multiply(c,result1)[0]
+    
 
-    return [output , input , `${a} and ${b} and ${c} sum to ${output}.` , `The product of ${a} and ${b} and ${c} is ${input}.`]
+    return [output , result2 ,`${a} and ${b} and ${c} sum to ${output}.` , `The product of ${a} and ${b} and ${c} is ${result2}.`];
 
 }
 
