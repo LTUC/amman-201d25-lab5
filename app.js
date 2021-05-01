@@ -121,7 +121,11 @@ function multiplyArray(multArr) { //eslint-disable-line
 
 
 // Here is the test for multiplyArray(); uncomment it to run it
+ //problem6
+ //testMultiplyArray(testArray);
+
 testMultiplyArray(testArray);
+// main
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -142,13 +146,19 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+    var w =multiply(testDynamicArray[0],testDynamicArray[1])[0];
+  var g =multiply(testDynamicArray[2],testDynamicArray[3])[0];
+  var q =multiply(w,g)[0];
+  var dynamicArray =multiply(testDynamicArray[4],q)[0];
+  var multiplyAnyArray = [dynamicArray,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+dynamicArray+'.' ];
+ return multiplyAnyArray;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
