@@ -55,6 +55,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+
+ 
    
 }
 
@@ -62,15 +64,17 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 // Here is the test for sumAndMultiply(); uncomment it to run it
 
 
+
 // testSumAndMultiply(4,7,5);
 
 
 
 
- testSumAndMultiply(4,7,5);
 
 
-testSumAndMultiply(4,7,5);
+
+//testSumAndMultiply(4,7,5);
+
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -93,11 +97,24 @@ function sumArray(sumArr) { //eslint-disable-line
 
     return [sUmar, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sUmar} is their sum.`]
 
+    let sAm = sum(sumArr[0], sum(sumArr[1],sumArr[2])[0])[0];
+
+    return [sAm, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sAm} is their sum.`]
+
+    let sUmar = sum(sumArr[0], sum(sumArr[1],sumArr[2])[0])[0];
+
+    return [sUmar, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sUmar} is their sum.`]
+
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
+
+
+
  testSumArray(testArray);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -113,9 +130,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+
     let mUltiar = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
    
     return[mUltiar,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mUltiar}.`]
+
+    let miLTYg = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
+   
+    return[miLTYg,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${miLTYg}.`]
+
 
 }
 
