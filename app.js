@@ -55,11 +55,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sUm1 =sum(a,b)[0];
-    let sUm2 =sum(sUm1,c)[0];
-    let mUlti1 =multiply(a,b)[0];
-    let mUlti2 =multiply(mUlti1,c)[0];
-    return[sUm2,mUlti2,`${a} and ${b} and ${c} sum to ${sUm2}.`,`The product of ${a} and ${b} and ${c} is ${mUlti2}.`]
+    let firstSum =sum(a,b)[0];
+    let secoundSum =sum(firstSum,c)[0];
+    let firstMultiy =multiply(a,b)[0];
+    let secoundMultiy =multiply(firstMultiy,c)[0];
+    return[secoundSum,secoundMultiy,`${a} and ${b} and ${c} sum to ${secoundSum}.`,`The product of ${a} and ${b} and ${c} is ${secoundMultiy}.`]
 }
 
 
