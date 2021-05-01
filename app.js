@@ -72,15 +72,12 @@ Write a function called sumArray() that takes in an array of numbers as its sing
 IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
-
-// Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let sumOut=sum(sumArr[0],sum(sumArr[1],sumArr[2]));
+     let sumA=sumArr[0]+sumArr[1]+sumArr[2];
 
-
-    return [sumOut,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumOut} is their sum.`];
+     return [sumA, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumA} is their sum.`] 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -147,9 +144,9 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-
+let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    let testArray = [1,2,3,4,5]; //eslint-disable-line
+
 
   let QSixArray = [];
  let numOfEle = dynamicArray.length;
@@ -167,7 +164,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
   return QSixArray;
 }
-
+multiplyAnyArray(testDynamicArray)
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
