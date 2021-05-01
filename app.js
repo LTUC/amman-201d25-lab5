@@ -55,29 +55,25 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+
  
-    let sUm1 =sum(a,b)[0];
-    let sUm2 =sum(sUm1,c)[0];
-    let mUlti1 =multiply(a,b)[0];
-    let mUlti2 =multiply(mUlti1,c)[0];
-    return[sUm2,mUlti2,`${a} and ${b} and ${c} sum to ${sUm2}.`,`The product of ${a} and ${b} and ${c} is ${mUlti2}.`]
-}
-// Here is the test for sumAndMultiply(); uncomment it to run it
- testSumAndMultiply(4,7,5);
-=======
-    let firstSum =sum(a,b)[0];
-    let secoundSum =sum(firstSum,c)[0];
-    let firstMultiy =multiply(a,b)[0];
-    let secoundMultiy =multiply(firstMultiy,c)[0];
-    return[secoundSum,secoundMultiy,`${a} and ${b} and ${c} sum to ${secoundSum}.`,`The product of ${a} and ${b} and ${c} is ${secoundMultiy}.`]
+   
 }
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 
- testSumAndMultiply(4,7,5);
 
-testSumAndMultiply(4,7,5);
+
+// testSumAndMultiply(4,7,5);
+
+
+
+
+
+
+
+//testSumAndMultiply(4,7,5);
 
 
 
@@ -97,6 +93,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    let sUmar = sum(sumArr[0], sum(sumArr[1],sumArr[2])[0])[0];
+
+    return [sUmar, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sUmar} is their sum.`]
 
     let sAm = sum(sumArr[0], sum(sumArr[1],sumArr[2])[0])[0];
 
@@ -111,7 +110,8 @@ function sumArray(sumArr) { //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+
+
 
  testSumArray(testArray);
 
@@ -130,9 +130,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+
+    let mUltiar = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
+   
+    return[mUltiar,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mUltiar}.`]
+
     let miLTYg = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
    
     return[miLTYg,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${miLTYg}.`]
+
 
 }
 
