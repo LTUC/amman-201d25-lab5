@@ -110,9 +110,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    let mUltiar = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
+    let miLTYg = multiply(multArr[0], multiply(multArr[1],multArr[2])[0])[0];
    
-    return[mUltiar,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mUltiar}.`]
+    return[miLTYg,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${miLTYg}.`]
 
 }
 
