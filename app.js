@@ -9,11 +9,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+let sumResuilt=a+b;
+return[sumResuilt,`The sum of ${a} and ${b} is ${sumResuilt}.`];
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -27,11 +28,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    let multiResuilt=a*b;
+    return[multiResuilt,`The product of ${a} and ${b} is ${multiResuilt}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,11 +50,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sum1=sum(4,7)[0];
+  let sum2=sum(sum1,c)[0];
+  let multi1=multiply(4,7)[0];
+  let multi2=multiply(multi1,c)[0];
+  return[sum2,multi2,`${a} and ${b} and ${c} sum to ${sum2}.`,`The product of ${a} and ${b} and ${c} is ${multi2}.`]; 
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,12 +75,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    let sum1=sum(sumArr[0],sumArr[1])[0];
+    let sum2=sum(sum1,sumArr[2])[0];
+return[sum2,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2} is their sum.`];
 }
-
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,11 +97,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    let multi1=multiply(multArr[0],multArr[1])[0];
+    let multi2=multiply(multi1,multArr[2])[0];
+    return[multi2,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multi2}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -119,10 +127,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+   let array1 = [1, 2, 3, 4, 5];
+ let multiArray1 = multiply(array1[0], array1[1]);
+   let multiArray2 = multiply(multiArray1[0], array1[2]);
+   let multiArray3 = multiply(multiArray2[0], array1[3]);
+   let multiArray4 = multiply(multiArray3[0], array1[4]);
+ return [multiArray4[0],`The numbers ${testDynamicArray} have a product of ${multiArray4[0]}.`];
+   
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
